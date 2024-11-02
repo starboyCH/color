@@ -1,0 +1,36 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100dvh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #141414;
+}
+.box{
+	width: clamp(10px, 50vw, 60vh);
+	height: clamp(10px, 50vw, 60vh);
+	border: 1px solid #000;
+	box-shadow: 0 0 3vw #000;
+	background-color: transparent;
+	animation: appear 1.2s both, slide-up 0.8s both;
+}
+@keyframes appear{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes slide-up{
+	from{
+		transform: translateY(40px);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
